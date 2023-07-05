@@ -17,14 +17,119 @@ body {
     justify-content: center;
 }
 
-.astro-container {
+
+nav {
+    z-index: 10;
+    position: fixed;
+    font-family: Oswald, sans-serif;
+    font-size: 24px;
+    letter-spacing: 3px;
+    padding: 3px;
+    width: 100vw;
+    height: 6vw;
+    background: rgb(255 255 255 / 50%);
+    top: 0;
+  }
+  /* Add this CSS to your style.css file or in a <style> tag */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .astro-container {
+    margin-bottom: 20px;
+    background-color: red;
     width: auto;
     max-width: 900px;
     padding: 20px 30px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.4);
     box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: 70%;
+  }
+  
+  .signs-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 216px;
+  }
+  
+  .twelve-signs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: white;
+    gap: 5px;
+  }
+  
+  .twelve-signs li {
+    margin: 5px;
+    display: inline-block;
+    border: 2px solid green;
+    border-radius: 50%;
+    height: 32%;
+    width: 11%;
+    padding: 20px 20px 3px 19px;
+    list-style-type: none;
+    cursor: pointer;
+  }
+  @media screen and (min-width: 1200px) {
+    .astro-container {
+        margin-bottom: 20px;
+        background-color: red;
+        width: auto;
+        max-width: 900px;
+        padding: 20px 30px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
+        position: relative;
+        /* bottom: 9%; */
+        top: -2%;
+    }
+
+    .signs-container {
+        margin-top: 27px;
+    }
 }
+
+  .modal-content {
+    display: block;
+    background-color: orange;
+  }
+  
+/* h2 {
+    width: 550px;
+    color: white;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: var(--border-radius);
+    text-align: center;
+    text-transform: uppercase;
+    margin: 61px auto 19px;
+    user-select: none;
+} */
+/* .astro-container {
+    width: auto;
+    max-width: 900px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
+} */
+  /* Astro sings */
+/* .signs-container {
+    display: flex;  
+} */
 .astro-text {
     font-size: 2.75rem;
 }
@@ -37,12 +142,6 @@ body {
     font-size: 4rem;
 }
 
-/* .quote-author {
-    margin-top: 15px;
-    font-size: 2rem;
-    font-weight: 400;
-    font-style: italic;
-} */
 
 .button-container {
     margin-top: 15px;
@@ -72,6 +171,14 @@ button:active {
     box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
 }
 
+/* .twelve-signs {
+    
+} */
+
+ /* li {
+    
+} */
+
 /* .twitter-button:hover {
     color: #38a1f3;
 }
@@ -79,9 +186,12 @@ button:active {
 .fa-twitter {
     font-size: 1.5rem;
 } */
-
+#about-container {
+    display: inline-block;
+    background-color: #f58012;
+}
 /* loader */
-.loader {
+/* .loader {
     border: 16px solid #f3f3f3; 
     border-top: 16px solid #f58012;
     border-radius: 50%;
@@ -93,7 +203,7 @@ button:active {
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-  }
+  } */
 
 /* Media Query: Tablet or smaller */
 @media screen and (max-width: 1000px) {
@@ -104,3 +214,10 @@ button:active {
         font-size: 2.5rem;
     }
 }
+ 
+      
+      /* .signs-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 216px;
+      } */

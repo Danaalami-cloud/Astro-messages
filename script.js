@@ -3,12 +3,42 @@ const astroText = document.getElementById('message');
 const newAstroBtn = document.getElementById('new-message');
 const loader = document.getElementById('loader');
 const apiResponseContainer = document.getElementById('apiResponse');
+const aboutContainer = document.getElementById('about-container');
+const signElements = document.querySelectorAll('.twelve-signs li');
 
+signElements.forEach((signElement) => {
+    signElement.addEventListener('click', () => {
+        const sign = signElement.textContent.toLowerCase();
+        getMessages(sign);
+    });
+});
 
-let astroMessages = [];
+function showModal(about) {
+    const modalAbout = document.getElementById('modal-about');
+    modalAbout.textContent = about;
+    const modal = document.getElementById('modal');
+    modal.style.display = 'block';
+}
+
+// Close modal when user clicks on button or outside
+const modal = document.getElementById('modal');
+const closeButton = document.getElementsByClassName('close')[0];
+
+closeButton.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+})
+
+let astroMessage = {};
+// let astroMessages = {};
 
 function showLoadingSpinner() {
-    loader.hidden = false;
+    // loader.hidden = false;
     astroContainer.hidden = true;
 }
 
@@ -16,23 +46,28 @@ function removeLoadingSpinner() {
     astroContainer.hidden = false;
     loader.hidden = true;
 }
+
 function newMessage() {
     showLoadingSpinner();
-    // Check if astroMessages array is empty or undefined
-    if (astroMessages && astroMessages.length > 0) {
-        // pick a random sign
-        const message = astroMessages[Math.floor(Math.random() * astroMessages.length)];
-        // Set Quote, Hide Loader
-        astroText.textContent = message.text;
-    }
     removeLoadingSpinner();
 }
+// function newMessage() {
+//     showLoadingSpinner();
+//     // Check if astroMessages array is empty or undefined
+//     if (astroMessage && astroMessage.text) {
+//         astroText.textContent = apiResponseContainer.textContent; // Update this line
+
+//     } else {
+//         astroText.textContent = "No message available";
+//     }
+//     removeLoadingSpinner();
 
 
+// }
 // Get Quotes from API
-async function getMessages() {
+async function getMessages(sign) {
     showLoadingSpinner();
-    const apiUrl = 'https://horoscope-astrology.p.rapidapi.com/affinity?sign1=Libra&sign2=Aries';
+    const apiUrl = `https://horoscope-astrology.p.rapidapi.com/sign?s=${sign}`;
     const options = {
 	method: 'GET',
 	headers: {
@@ -40,54 +75,28 @@ async function getMessages() {
 		'X-RapidAPI-Host': 'horoscope-astrology.p.rapidapi.com'
 	}
 };
-
 try {
     const response = await fetch(apiUrl, options);
-        astroMessages = await response.json(); // Store response data in astroMessages
-        apiResponseContainer.textContent = JSON.stringify(astroMessages); // Display API response in the container
-        console.log(astroMessages);
-        newMessage(); // Call newMessage after populating astroMessages
-    } catch (error) {
-        console.log(error);
-    }
-//     const apiResponse = await response.json();
-//     console.log(apiResponse);
-//     if (response) {
-//         removeLoadingSpinner();
-//     }
-//     newMessage();
-// } catch (error) {
-// 	console.log(error);
-// }
-}
-// function show(data) {
-//     let signs =
-//     `<ul>
-//     <li>Aries<li>
-//     <li>Taurus<li>
-//     <li>Gemini<li>
-//     <li>Cancer<li>
-//     <li>Leo<li>
-//     <li>Virgo<li>
-//     <li>Libra<li>
-//     <li>Scorpio<li>
-//     <li>Sagitarius<li>
-//     <li>Capricorn<li>
-//     <li>Aquarius<li>
-//     <li>Pisces<li>
-//     </ul>`;
-//     // Loop to access all signs
-//     for (let signs of data.list) {
-//         signs +=`<ul>
-//         <li>${signs.Aries}</li>
-//         </ul>`;
-//     }
-    document.getElementById("apiResponse").innerHTML = JSON.stringify(apiResponse);
+    const apiResponse = await response.json();
+    const aboutData = apiResponse.about;
 
+    showModal(aboutData);
+    removeLoadingSpinner();
+    // console.log(aboutData); // Display the 'about' data in the console
+     // Display the 'about' data on the screen
+    //  aboutContainer.textContent = aboutData;
+   
+    // newMessage(); // Call newMessage after populating astroMessages
+    } catch (error) {
+    // console.log(error);
+    astroText.textContent = "No message available";
+    }
+}
+document.getElementById('apiResponse').innerHTML = JSON.stringify(astroMessage);
 
 
 // Event Listeners
-newAstroBtn.addEventListener('click', newMessage);
+// newAstroBtn.addEventListener('click', newMessage);
 
 // On Load
 getMessages();
