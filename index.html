@@ -1,73 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Astro messages</title>
-    <link rel="icon" type="image/png" href="https://www.google.com/s2/u/0/favicons?domain=deedeeportfolio.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="icon" type="image/png" href="favicon/favicon.ico"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-    <!-- <div class="image-container">
-        <img src="./images/purpleGalaxy.png" alt="Galaxy image">
-        <img src="./images/crystal.png" alt="Crystal image">
-    </div> -->
+  <body>
     <nav id="nav">
-        <h1>Welcome to Astrology</h1>
+      <h1>Welcome to Astrology</h1>
     </nav>
-<div class="container">
-    <!-- Astro element -->
-    <div class="astro-container" id="astro-container">
-        <h3> Choose your sign and see what destiny has written for you</h3>
-        </div>
-    <!-- Astro Signs -->
-    <div class="signs-container">
+    <div class="container">
+      <!-- Astro element -->
+      <div class="astro-container" id="astro-container">
+        <h3>Choose your sign and see what destiny has written for you</h3>
+      </div>
+      <!-- Astro Signs -->
+      <div class="signs-container">
         <ul class="twelve-signs">
-            <li>Aries</li>
-            <li>Taurus</li>
-            <li>Gemini</li>
-            <li>Cancer</li>
-            <li>Leo</li>
-            <li>Virgo</li>
-            <li>Libra</li>
-            <li>Scorpio</li>
-            <li>Sagitarius</li>
-            <li>Capricorn</li>
-            <li>Aquarius</li>
-            <li>Pisces</li>
+          <li>Aries</li>
+          <li>Taurus</li>
+          <li>Gemini</li>
+          <li>Cancer</li>
+          <li>Leo</li>
+          <li>Virgo</li>
+          <li>Libra</li>
+          <li>Scorpio</li>
+          <li>Sagitarius</li>
+          <li>Capricorn</li>
+          <li>Aquarius</li>
+          <li>Pisces</li>
         </ul>
+      </div>
     </div>
-</div>            
-    <!-- </section> -->
-    
-        <div class="astro-text">
-            <!-- <i class="fas fa-quote-left"></i> -->
-            <span id="message"></span>
-        </div>
-        <!-- Buttons -->
-        <!-- <div class="button-container">
-            <button id="new-message">New Astro Message</button>
-        </div> -->
-    <!-- About container -->
+
+    <div class="astro-text">
+      <span id="message"></span>
+    </div>
+
     <!-- Modal -->
-<div id="modal" class="modal-container">
-    <i class="fa-solid fa-xmark close-icon" id="close-modal"></i>
-    <div class="modal-content">
-      <p id="modal-about"></p>
+    <div id="modal" class="modal-container">
+      <i class="fa-solid fa-xmark close-icon" id="close-modal"></i>
+      <div class="modal-content">
+        <p id="modal-about"></p>
+      </div>
     </div>
-  </div>
-  <div id="horescope-container"></div>    
-    
-  <!-- Loader -->
+    <div id="horescope-container"></div>
+
+    <!-- Loader -->
     <div class="loader" id="loader"></div>
 
     <!-- Display API -->
     <div id="apiResponse"></div>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

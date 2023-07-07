@@ -1,13 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    /* margin: 0;
+  background-image: url(./images/crystal.png),
+    url(https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80);
+  background-position: top 2px left 296px, top left 0px;
+  background-size: 211%, 264%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+nav {
+  z-index: 10;
+  position: fixed;
+  font-family: Oswald, sans-serif;
+  font-size: 24px;
+  letter-spacing: 3px;
+  padding: 3px;
+  width: 100vw;
+  height: 14vh;
+  background: rgb(255 255 255 / 50%);
+  top: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.astro-container {
+  margin-bottom: 20px;
+  width: auto;
+  max-width: 900px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: 70%;
+  font-family: Oswald, sans-serif;
+  font-size: 14px;
+  letter-spacing: 3px;
+}
+
+.signs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.twelve-signs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 59%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.twelve-signs li {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3.5px solid rgb(164 16 242);
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  padding: 25px 27px 22px 39px;
+  list-style-type: none;
+  cursor: pointer;
+  font-size: 33px;
+  font-weight: bold;
+  overflow: hidden;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media screen and (min-width: 390px) {
+  .astro-container {
+    top: 80%;
+    left: 20%;
+    width: 60%;
+  }
+
+  .modal-container {
+    top: 30%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    margin: 0;
     min-height: 100vh;
-    background-image:  url("./images/crystal.png"), url("https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80");
+    background-image: url("./images/crystal.png"),
+      url("https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80");
     background-position: top -2px right 0, top left 0;
     background-size: 50%, 50%;
     background-repeat: no-repeat;
@@ -17,20 +117,9 @@ body {
     text-align: center;
     display: flex;
     align-items: center;
-    justify-content: center; */
-    
-        background-image: url(./images/crystal.png), url(https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80);
-        background-position: top 2px left 296px, top left 0px;
-        background-size: 211%, 264%;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    min-height: 100vh;
-}
-
-
-
-nav {
+  }
+  nav {
     z-index: 10;
     position: fixed;
     font-family: Oswald, sans-serif;
@@ -38,24 +127,13 @@ nav {
     letter-spacing: 3px;
     padding: 3px;
     width: 100vw;
-    height: 14vh; 
+    height: 14vh;
     background: rgb(255 255 255 / 50%);
     top: 0;
   }
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  
   .astro-container {
-    /* top: 51%;
-    width: 31%;
-    left: 33%; */
     margin-bottom: 20px;
-    width: auto;
+    width: 33%;
     max-width: 900px;
     padding: 20px 30px;
     border-radius: 10px;
@@ -63,295 +141,165 @@ nav {
     box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
     position: relative;
     top: 70%;
-    font-family: Oswald, sans-serif;
-    font-size: 14px;
-    letter-spacing: 3px;
+    left: 22%;
   }
-  
-  .signs-container {
+  .twelve-signs {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
-    /* flex-direction: column;
-    align-items: center;
-    margin-top: 0; */
-    /* justify-content: flex-start;  */
-     /* margin-top: 216px; */
+    justify-content: space-between;
+    /* justify-content: center; */
+    list-style: none;
+    padding: 16px;
+    margin: 233px 0 0 8px;
+    margin: 20px 0;
+    flex-basis: 100%;
+    flex-direction: row;
+    color: whitesmoke;
+    gap: 4px;
+    flex-basis: 47%;
   }
-  
-  .twelve-signs {
-        display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin-bottom: 59%;
-  list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 4px;
-        }
-    /* display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-bottom: 59%; */
-    /* display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between; */
-        /* justify-content: center; */
-        /* list-style: none;
-        padding: 16px;
-        margin: 233px 0 0 8px;
-        margin: 20px 0;
-        flex-basis: 100%;
-        flex-direction: row;
-        color: whitesmoke;
-        gap: 4px;
-        flex-basis: 47%; */
-        /* list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 4px; */
 
-    .twelve-signs li {
-        margin: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 3.5px solid rgb(164 16 242);
-        border-radius: 50%;
-        height: 100px;
-        width: 100px;
-        padding: 25px 27px 22px 39px;
-        list-style-type: none;
-        cursor: pointer;
-        font-size: 33px;
-        font-weight: bold;
-        overflow: hidden;
-        text-align: center;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
+  .twelve-signs li {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3.5px solid rgb(164 16 242);
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    padding: 25px 27px 22px 39px;
+    list-style-type: none;
+    cursor: pointer;
+    font-size: 33px;
+    font-weight: bold;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .signs-container {
+    margin-top: 225px;
+    justify-content: flex-start;
+  }
+}
 
-    @media screen and (min-width: 390px){
-        .astro-container {
-            top: 80%; 
-            left: 20%; 
-            width: 60%; 
-          }
-          
-          .modal-container {
-            top: 30%; /* Adjust the top position */
-          }
-    }
-
-    @media screen and (min-width: 1200px) {
-        body {
-        margin: 0;
-        min-height: 100vh;
-        background-image:  url("./images/crystal.png"), url("https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80");
-        background-position: top -2px right 0, top left 0;
-        background-size: 50%, 50%;
-        background-repeat: no-repeat;
-        color: #000;
-        font-family: Montserrat, sans-serif;
-        font-weight: 700;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        }
-        nav {
-            /* height: 17vh; */
-            z-index: 10;
-    position: fixed;
-    font-family: Oswald, sans-serif;
-    font-size: 24px;
-    letter-spacing: 3px;
-    padding: 3px;
-    width: 100vw;
-    height: 14vh; 
-     background: rgb(255 255 255 / 50%);
-    top: 0;
-        }
-        .astro-container {
-            margin-bottom: 20px;
-            width: 33%;
-            max-width: 900px;
-            padding: 20px 30px;
-            border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.4);
-            box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
-            position: relative;
-            top: 70%;
-            left: 22%;
-        }
-        .twelve-signs {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            /* justify-content: center; */
-            list-style: none;
-            padding: 16px;
-            margin: 233px 0 0 8px;
-            margin: 20px 0;
-            flex-basis: 100%;
-            flex-direction: row;
-            color: whitesmoke;
-            gap: 4px;
-            flex-basis: 47%;
-          }
-          
-          .twelve-signs li {
-            margin: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 3.5px solid rgb(164 16 242);
-            border-radius: 50%;
-            height: 100px;
-            width: 100px;
-            padding: 25px 27px 22px 39px;
-            list-style-type: none;
-            cursor: pointer;
-            font-size: 33px;
-            font-weight: bold;
-            overflow: hidden;
-            text-align: center;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-          }
-        .signs-container {
-            margin-top: 225px;
-            justify-content: flex-start;
-        }
-        
-    }
-  
-  
 /* Modal */
 .modal {
-    display: none;
-    background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-    max-width: 96%;
-    width: 500px;
-    animation: modalopen 1s;
-    z-index: 1010;
+  display: none;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  max-width: 96%;
+  width: 500px;
+  animation: modalopen 1s;
+  z-index: 1010;
 }
 .modal-container {
-    position: absolute;
-    top: 200px;
-    right: -52px;
-    width: 50%;
-    height: 65%;
-  
-    /* spacing as needed */
-    padding: 20px 50px 20px 20px;
-  
-    /* let it scroll */
-    overflow: auto;
+  position: absolute;
+  top: 200px;
+  right: -52px;
+  width: 50%;
+  height: 65%;
+
+  padding: 20px 50px 20px 20px;
+
+  /* let it scroll */
+  overflow: auto;
 }
 @keyframes modalopen {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-@media screen and (min-width:1200px) {
-    .modal-container {
-            top: 46%;
-    }
+@media screen and (min-width: 1200px) {
+  .modal-container {
+    top: 46%;
+  }
 }
 
 .close-icon {
-    float: right;
-    color: rgb(164 16 242);
-    font-size: 33px;
-    position: relative;
-    top: 13px;
-    right: 13px;
-    cursor: pointer;
+  float: right;
+  color: rgb(164 16 242);
+  font-size: 33px;
+  position: relative;
+  top: 13px;
+  right: 13px;
+  cursor: pointer;
 }
 
+.modal-content {
+  display: block;
+  padding: 20px;
+  color: #000;
+  font-size: 33px;
+  font-weight: bold;
+  background: rgb(255 255 255 / 50%);
+  border-radius: 30px;
+}
 
-  .modal-content {
-    display: block;
-    padding: 20px;
-    color: #000;
-    font-size: 33px;
-    font-weight: bold;
-    background: rgb(255 255 255 / 50%);
-    border-radius: 30px;
-  }
-  
 .astro-text {
-    font-size: 2.75rem;
+  font-size: 2.75rem;
 }
 
 .long-message {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
-/* Mobile devices media query */
+/*  Tablet media query */
 @media screen and (max-width: 768px) {
-    body {
-        background-image:  url("./images/crystal.png"), url("https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80");
-        background-position: top -2px right -256px, top left 0;
-        background-size: 90%, 90%;
-        background-repeat: no-repeat;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  body {
+    background-image: url("./images/crystal.png"),
+      url("https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80");
+    background-position: top -2px right -256px, top left 0;
+    background-size: 90%, 90%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    /* nav {
-        height: 9vw;
-    } */
-    .signs-container {
-        margin-top: 20px;
-    }
+  .signs-container {
+    margin-top: 20px;
+  }
 
-    .twelve-signs {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 4px;
-        list-style: none;
-        padding: 16px;
-        margin: 303px 402px 0 8px;
-        color: whitesmoke;
-        flex-basis: 47%;
-    }
+  .twelve-signs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4px;
+    list-style: none;
+    padding: 16px;
+    margin: 303px 402px 0 8px;
+    color: whitesmoke;
+    flex-basis: 47%;
+  }
 
-    .twelve-signs li {
-        font-size: 24px;
-        padding: 15px;
-    }
+  .twelve-signs li {
+    font-size: 24px;
+    padding: 15px;
+  }
 
-    .astro-container {
-        background-color: rgb(255 255 255 / 50%);
-        top: 85%;
-        left: 23%;
-        width: 45%;
-        border-radius: 30px;
-    }
+  .astro-container {
+    background-color: rgb(255 255 255 / 50%);
+    top: 85%;
+    left: 23%;
+    width: 45%;
+    border-radius: 30px;
+  }
 
-    .modal-container {
-        width: 53%;
-        max-width: 90%;
-        max-height: 80%;
-        height: 227%;
-        overflow: auto;
-        top: 35%;
-    }
-    .modal-content {
+  .modal-container {
+    width: 53%;
+    max-width: 90%;
+    max-height: 80%;
+    height: 227%;
+    overflow: auto;
+    top: 35%;
+  }
+  .modal-content {
     font-size: 33px;
     font-weight: bold;
-    }
+  }
 }
