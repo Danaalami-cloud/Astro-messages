@@ -5,17 +5,29 @@ html {
 }
 
 body {
-    margin: 0;
+    /* margin: 0;
     min-height: 100vh;
-    background-image: url("https://images.unsplash.com/photo-1533294455009-a77b7557d2d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+    background-image:  url("./images/crystal.png"), url("https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80");
+    background-position: top -2px right 0, top left 0;
+    background-size: 50%, 50%;
+    background-repeat: no-repeat;
     color: #000;
     font-family: Montserrat, sans-serif;
     font-weight: 700;
     text-align: center;
     display: flex;
     align-items: center;
+    justify-content: center; */
+    
+        background-image: url(./images/crystal.png), url(https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80);
+        background-position: top 2px left 296px, top left 0px;
+        background-size: 211%, 264%;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    min-height: 100vh;
 }
+
 
 
 nav {
@@ -26,11 +38,10 @@ nav {
     letter-spacing: 3px;
     padding: 3px;
     width: 100vw;
-    height: 6vw;
+    height: 14vh; 
     background: rgb(255 255 255 / 50%);
     top: 0;
   }
-  /* Add this CSS to your style.css file or in a <style> tag */
 .container {
     display: flex;
     flex-direction: column;
@@ -40,8 +51,10 @@ nav {
   }
   
   .astro-container {
+    /* top: 51%;
+    width: 31%;
+    left: 33%; */
     margin-bottom: 20px;
-    background-color: red;
     width: auto;
     max-width: 900px;
     padding: 20px 30px;
@@ -50,86 +63,233 @@ nav {
     box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
     position: relative;
     top: 70%;
+    font-family: Oswald, sans-serif;
+    font-size: 14px;
+    letter-spacing: 3px;
   }
   
   .signs-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 216px;
+    margin-top: 20px;
+    /* flex-direction: column;
+    align-items: center;
+    margin-top: 0; */
+    /* justify-content: flex-start;  */
+     /* margin-top: 216px; */
   }
   
   .twelve-signs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    flex-direction: row;
-    flex-wrap: wrap;
-    color: white;
-    gap: 5px;
-  }
-  
-  .twelve-signs li {
-    margin: 5px;
-    display: inline-block;
-    border: 2px solid green;
-    border-radius: 50%;
-    height: 32%;
-    width: 11%;
-    padding: 20px 20px 3px 19px;
-    list-style-type: none;
-    cursor: pointer;
-  }
-  @media screen and (min-width: 1200px) {
-    .astro-container {
-        margin-bottom: 20px;
-        background-color: red;
-        width: auto;
-        max-width: 900px;
-        padding: 20px 30px;
-        border-radius: 10px;
-        background-color: rgba(255, 255, 255, 0.4);
-        box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
-        position: relative;
-        /* bottom: 9%; */
-        top: -2%;
+        display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 59%;
+  list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 4px;
+        }
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 59%; */
+    /* display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; */
+        /* justify-content: center; */
+        /* list-style: none;
+        padding: 16px;
+        margin: 233px 0 0 8px;
+        margin: 20px 0;
+        flex-basis: 100%;
+        flex-direction: row;
+        color: whitesmoke;
+        gap: 4px;
+        flex-basis: 47%; */
+        /* list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4px; */
+
+    .twelve-signs li {
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3.5px solid rgb(164 16 242);
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        padding: 25px 27px 22px 39px;
+        list-style-type: none;
+        cursor: pointer;
+        font-size: 33px;
+        font-weight: bold;
+        overflow: hidden;
+        text-align: center;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 
-    .signs-container {
-        margin-top: 27px;
+    @media screen and (min-width: 390px){
+        .astro-container {
+            top: 80%; 
+            left: 20%; 
+            width: 60%; 
+          }
+          
+          .modal-container {
+            top: 30%; /* Adjust the top position */
+          }
+    }
+
+    @media screen and (min-width: 1200px) {
+        body {
+        margin: 0;
+        min-height: 100vh;
+        background-image:  url("./images/crystal.png"), url("https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80");
+        background-position: top -2px right 0, top left 0;
+        background-size: 50%, 50%;
+        background-repeat: no-repeat;
+        color: #000;
+        font-family: Montserrat, sans-serif;
+        font-weight: 700;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+        nav {
+            /* height: 17vh; */
+            z-index: 10;
+    position: fixed;
+    font-family: Oswald, sans-serif;
+    font-size: 24px;
+    letter-spacing: 3px;
+    padding: 3px;
+    width: 100vw;
+    height: 14vh; 
+     background: rgb(255 255 255 / 50%);
+    top: 0;
+        }
+        .astro-container {
+            margin-bottom: 20px;
+            width: 33%;
+            max-width: 900px;
+            padding: 20px 30px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            top: 70%;
+            left: 22%;
+        }
+        .twelve-signs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            /* justify-content: center; */
+            list-style: none;
+            padding: 16px;
+            margin: 233px 0 0 8px;
+            margin: 20px 0;
+            flex-basis: 100%;
+            flex-direction: row;
+            color: whitesmoke;
+            gap: 4px;
+            flex-basis: 47%;
+          }
+          
+          .twelve-signs li {
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3.5px solid rgb(164 16 242);
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            padding: 25px 27px 22px 39px;
+            list-style-type: none;
+            cursor: pointer;
+            font-size: 33px;
+            font-weight: bold;
+            overflow: hidden;
+            text-align: center;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+        .signs-container {
+            margin-top: 225px;
+            justify-content: flex-start;
+        }
+        
+    }
+  
+  
+/* Modal */
+.modal {
+    display: none;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    max-width: 96%;
+    width: 500px;
+    animation: modalopen 1s;
+    z-index: 1010;
+}
+.modal-container {
+    position: absolute;
+    top: 200px;
+    right: -52px;
+    width: 50%;
+    height: 65%;
+  
+    /* spacing as needed */
+    padding: 20px 50px 20px 20px;
+  
+    /* let it scroll */
+    overflow: auto;
+}
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@media screen and (min-width:1200px) {
+    .modal-container {
+            top: 46%;
     }
 }
 
+.close-icon {
+    float: right;
+    color: rgb(164 16 242);
+    font-size: 33px;
+    position: relative;
+    top: 13px;
+    right: 13px;
+    cursor: pointer;
+}
+
+
   .modal-content {
     display: block;
-    background-color: orange;
+    padding: 20px;
+    color: #000;
+    font-size: 33px;
+    font-weight: bold;
+    background: rgb(255 255 255 / 50%);
+    border-radius: 30px;
   }
   
-/* h2 {
-    width: 550px;
-    color: white;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: var(--border-radius);
-    text-align: center;
-    text-transform: uppercase;
-    margin: 61px auto 19px;
-    user-select: none;
-} */
-/* .astro-container {
-    width: auto;
-    max-width: 900px;
-    padding: 20px 30px;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
-} */
-  /* Astro sings */
-/* .signs-container {
-    display: flex;  
-} */
 .astro-text {
     font-size: 2.75rem;
 }
@@ -138,86 +298,60 @@ nav {
     font-size: 2rem;
 }
 
-.fa-quote-left {
-    font-size: 4rem;
-}
-
-
-.button-container {
-    margin-top: 15px;
-    display: flex;
-    justify-content: space-between;
-}
-
-button {
-    cursor: pointer;
-    font-size: 1.2rem;
-    height: 2.5rem;
-    border: none;
-    border-radius: 10px;
-    color: #fff;
-    background: #333;
-    outline: none;
-    padding: 0.5rem 1.8rem;
-    box-shadow: 0 0.3rem gba(121, 121, 121, 0.65);
-}
-
-button:hover {
-    filter: brightness(110%);
-}
-
-button:active {
-    transform: translate(0, 0.3rem);
-    box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
-}
-
-/* .twelve-signs {
-    
-} */
-
- /* li {
-    
-} */
-
-/* .twitter-button:hover {
-    color: #38a1f3;
-}
-
-.fa-twitter {
-    font-size: 1.5rem;
-} */
-#about-container {
-    display: inline-block;
-    background-color: #f58012;
-}
-/* loader */
-/* .loader {
-    border: 16px solid #f3f3f3; 
-    border-top: 16px solid #f58012;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  } */
-
-/* Media Query: Tablet or smaller */
-@media screen and (max-width: 1000px) {
-    .astro-container {
-        margin: auto 10px;
-    }
-    .astro-text {
-        font-size: 2.5rem;
-    }
-}
- 
-      
-      /* .signs-container {
+/* Mobile devices media query */
+@media screen and (max-width: 768px) {
+    body {
+        background-image:  url("./images/crystal.png"), url("https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80");
+        background-position: top -2px right -256px, top left 0;
+        background-size: 90%, 90%;
+        background-repeat: no-repeat;
+        height: 100vh;
         display: flex;
         justify-content: center;
-        margin-top: 216px;
-      } */
+        align-items: center;
+    }
+
+    /* nav {
+        height: 9vw;
+    } */
+    .signs-container {
+        margin-top: 20px;
+    }
+
+    .twelve-signs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 4px;
+        list-style: none;
+        padding: 16px;
+        margin: 303px 402px 0 8px;
+        color: whitesmoke;
+        flex-basis: 47%;
+    }
+
+    .twelve-signs li {
+        font-size: 24px;
+        padding: 15px;
+    }
+
+    .astro-container {
+        background-color: rgb(255 255 255 / 50%);
+        top: 85%;
+        left: 23%;
+        width: 45%;
+        border-radius: 30px;
+    }
+
+    .modal-container {
+        width: 53%;
+        max-width: 90%;
+        max-height: 80%;
+        height: 227%;
+        overflow: auto;
+        top: 35%;
+    }
+    .modal-content {
+    font-size: 33px;
+    font-weight: bold;
+    }
+}
