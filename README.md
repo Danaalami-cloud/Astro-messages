@@ -29,7 +29,7 @@
 
 ## Description
 
-A simple Astrology app that provides you with valuable information that will help you in thhe future(a month more or less....) 
+A simple Astrology app that provides you with valuable information that will help you in the future.
 
 ## Live Site
 https://danaalami-cloud.github.io/Astro-messages/
